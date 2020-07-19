@@ -1,0 +1,30 @@
+  zipkin:
+    base-url: http://192.168.43.13:9411/  
+  
+  sleuth:
+    sampler:
+      probability: 1.0      
+    trace-id128: true
+    
+  eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+  client:
+    service-url:
+      defaultZone: http://192.168.43.13:8761/eureka
+      
+      
+      
+spring:
+  application:
+    name: mysearch
+server:
+  port: 8020
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true

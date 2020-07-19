@@ -1,0 +1,16 @@
+package com.ibm.training;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.function.EntityResponse;
+
+@RestController
+public class AuthanticateController  {
+	
+	@PostMapping("/createAuthenticationToken")
+	EntityResponse<String> createAuthenticationToken() {
+		
+	}
+
+}

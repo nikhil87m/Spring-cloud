@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/CurrencyExchangeMS-0.0.1-SNAPSHOT.jar CurrencyExchangeMS.jar
+EXPOSE 8087 
+ENTRYPOINT ["java", "-jar", "CurrencyExchangeMS.jar"]

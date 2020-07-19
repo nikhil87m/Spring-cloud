@@ -1,0 +1,6 @@
+spring.application.name=order-generator-service
+server.port=9078
+spring.cloud.stream.function.bindings.supplyOrder-out-0=output
+spring.cloud.function.definition=supplyOrder
+
+

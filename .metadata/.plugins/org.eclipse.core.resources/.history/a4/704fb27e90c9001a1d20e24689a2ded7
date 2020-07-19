@@ -1,0 +1,2 @@
+eureka.client.serviceUrl.defaultZone=https://eureka.server/eureka/
+server.port=8585

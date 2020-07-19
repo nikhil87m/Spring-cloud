@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="ZipkinServer"/>
+<aop-project name="CurrencyEurekaServer"/>
+<aop-project name="CurrencyConversionMS"/>
+<aop-project name="AccountLoginMS"/>
+<aop-project name="OrderGeneratorMS"/>
+<aop-project name="ConversionFactorMS"/>
+<aop-project name="OrderProcessorMS"/>
+</aop-reference-model>

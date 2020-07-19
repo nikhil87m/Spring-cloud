@@ -1,0 +1,12 @@
+package com.ibm.training;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AccountLanding {
+	
+	public String sayHello() {
+		return "hello";
+	}
+
+}

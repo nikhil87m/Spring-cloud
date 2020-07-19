@@ -1,0 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.github-eureka.credentials.uri:http://172.18.0.2:8761}/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+ 

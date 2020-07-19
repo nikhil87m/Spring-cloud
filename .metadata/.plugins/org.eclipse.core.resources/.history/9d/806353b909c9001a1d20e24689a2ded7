@@ -1,0 +1,15 @@
+package com.ibm.training;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+
+@SpringBootApplication
+@EnableBinding(OrderProcesser.class)
+public class OrderGeneratorMsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OrderGeneratorMsApplication.class, args);
+	}
+
+}

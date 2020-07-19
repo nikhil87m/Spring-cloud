@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/ConversionFactorMS-0.0.1-SNAPSHOT.jar ConversionFactorMS.jar
+EXPOSE 8000 
+ENTRYPOINT ["java", "-jar", "ConversionFactorMS.jar"]

@@ -1,0 +1,18 @@
+package com.example.service;
+
+import java.math.BigDecimal;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.example.demo.CurrencyConversionController;
+
+public class CurrencyConversionService {
+	
+	private static Logger logger= LoggerFactory.getLogger(CurrencyConversionController.class);
+	
+	private void convertCurrency(String currencyFrom, String currencyTo, BigDecimal amount) {
+
+	}
+
+}

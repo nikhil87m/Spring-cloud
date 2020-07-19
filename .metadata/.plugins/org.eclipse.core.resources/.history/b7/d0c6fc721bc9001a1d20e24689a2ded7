@@ -1,0 +1,19 @@
+package com.ibm.training;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+
+@SpringBootApplication
+@EnableBinding(OrderProcessor.class)
+public class OrderProcessorMs {
+	public static final Logger logger = LoggerFactory.getLogger(OrderProcessorMs.class);
+
+	public static void main(String[] args) {
+		SpringApplication.run(OrderProcessorMs.class, args);
+		logger.info("The OrderProcessorMs Application has started...");
+	}
+
+}

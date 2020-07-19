@@ -1,0 +1,14 @@
+package com.example.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@FeignClient("forex-service")
+public interface RestClient {
+	
+	@GetMapping("/getExchangeValue")
+	public Long getExchangeValue((@RequestParam(name="currencyFrom") String currencyFrom, @RequestParam(name="currencyTo") String currencyTo));
+
+}
+}

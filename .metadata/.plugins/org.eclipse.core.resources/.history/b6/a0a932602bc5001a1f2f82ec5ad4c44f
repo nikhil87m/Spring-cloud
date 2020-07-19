@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.repo.ExchangeRepository;
+
+@RestController
+public class CurrencyExchangeService {
+	
+	@Autowired
+	ExchangeRepository exchangeRepository;
+	
+	@GetMapping("\")
+	public Integer getExchangeValue(@RequestParam(name="currencyTo", required = false) String key, @RequestParam(name="conversionFactor", required = false) String orderId){
+		return 0;
+	}
+
+}

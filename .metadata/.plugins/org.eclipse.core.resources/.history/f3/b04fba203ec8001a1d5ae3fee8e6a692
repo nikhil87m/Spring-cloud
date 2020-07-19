@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/CurrencyConversionMS-0.0.1-SNAPSHOT.jar CurrencyConversionMS.jar
+EXPOSE 8800
+ENTRYPOINT ["java", "-jar", "CurrencyConversionMS.jar"]

@@ -1,0 +1,5 @@
+package com.ibm.training.model;
+
+public class JwtResponse {
+
+}

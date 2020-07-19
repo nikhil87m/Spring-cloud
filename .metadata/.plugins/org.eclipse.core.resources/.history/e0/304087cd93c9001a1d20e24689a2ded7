@@ -1,0 +1,14 @@
+server.port: ${PORT:8761}
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.github-eureka.credentials.uri:http://127.0.0.1:8761}/eureka/
+  instance:
+    hostname: ${APPLICATION_DOMAIN}
+    nonSecurePort: 80

@@ -1,0 +1,15 @@
+package com.example.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class ExchangeEntity {
+	
+	@id
+	private Integer id;
+	
+	private String currencyTo;
+	
+	private String currencyFrom;
+
+}

@@ -1,0 +1,12 @@
+package com.ibm.training.rules;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BusinessRules {
+	
+	public String setPriority(long orderamount) {
+		
+	}
+
+}

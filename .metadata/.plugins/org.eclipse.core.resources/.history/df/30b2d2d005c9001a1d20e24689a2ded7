@@ -1,0 +1,7 @@
+spring.application.name=order-generator-service
+server.port=9078
+
+spring.cloud.stream.function.bindings.supplyLoan-out-0=output
+
+
+

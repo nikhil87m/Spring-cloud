@@ -1,0 +1,19 @@
+package com.ibm.training.rules;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BusinessRules {
+	
+	public String setPriority(long orderamount) {
+		String priority = null;
+		if(orderamount>5000) {
+			priority = "HIGH Priority";
+		}
+		else if (orderamount>500) {
+			priority = "MEDIUM Priority";
+		}
+		return priority;
+	}
+
+}

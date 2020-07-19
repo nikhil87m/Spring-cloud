@@ -1,0 +1,20 @@
+package com.example.service;
+
+import java.math.BigDecimal;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.repo.ExchangeRepository;
+
+@Service
+public class CurrencyExchangeService {
+	
+	@Autowired
+	private ExchangeRepository exchangeRepository;
+	
+	public BigDecimal getConversionfactor(String currencyFrom, String currencyTo) {
+		
+	}
+
+}

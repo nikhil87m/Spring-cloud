@@ -1,0 +1,12 @@
+package com.example.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.entity.ExchangeEntity;
+
+@Repository
+public interface ExchangeRepository extends JpaRepository<ExchangeEntity, Long>{
+
+	ExchangeEntity findByCurrencyFromAndCurrencyTo(String from, String to);
+}

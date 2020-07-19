@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public interface OrderProcesser {
+	
+	String ORDERS_IN = "output";
+	String PROCESSED_ORDERS = "processed";
+	String CANCELLED_ORDERS = "cancelled";
+	
+	@Input(ORDERS_IN)
+	SubscribableChannel sourceOfLoanApplications();
+
+	@Output(PROCESSED_ORDERS)
+	MessageChannel approved();
+
+	@Output(DECLINED_OUT)
+	MessageChannel declined();
+
+}

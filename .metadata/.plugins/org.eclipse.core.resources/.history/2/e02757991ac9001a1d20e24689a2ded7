@@ -1,0 +1,27 @@
+package com.ibm.training;
+
+import org.springframework.cloud.stream.annotation.Input;
+import org.springframework.cloud.stream.annotation.Output;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.SubscribableChannel;
+import org.springframework.stereotype.Component;
+
+
+
+@Component
+public interface OrderProcessor {
+	
+	//String ORDERS_IN = "output";
+	//String PROCESSED_ORDERS = "processed";
+	//String CANCELLED_ORDERS = "cancelled";
+	
+	@Input("output-0")
+	SubscribableChannel checkAndSortOrders();
+
+	@Output("h")
+	MessageChannel processed();
+
+	@Output("k")
+	MessageChannel cancelled();
+
+}

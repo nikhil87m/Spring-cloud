@@ -1,0 +1,10 @@
+package com.example.entity;
+
+@Entity
+public class ExchangeEntity {
+	
+	@id
+	private Integer id;
+	private 
+
+}

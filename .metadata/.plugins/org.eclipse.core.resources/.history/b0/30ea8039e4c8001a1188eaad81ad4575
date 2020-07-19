@@ -1,0 +1,5 @@
+package com.ibm.training.user.service;
+
+public class MyUserDetailsservice {
+
+}

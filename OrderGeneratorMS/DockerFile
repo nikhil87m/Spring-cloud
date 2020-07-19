@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/ordergenerator.jar ordergenerator.jar
+EXPOSE 9000 
+ENTRYPOINT ["java", "-jar", "ordergenerator.jar"]

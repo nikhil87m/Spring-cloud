@@ -1,0 +1,5 @@
+spring.application.name=order-generator-service
+spring.cloud.stream.function.bindings.supplyOrder-out-0=output
+spring.cloud.function.definition=supplyOrder
+
+

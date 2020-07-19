@@ -1,0 +1,14 @@
+1595087058805	Rename package 'com.example.demo'
+1595087087295	Rename type 'OrderProcessorMs1Application'
+1595087275042	Delete element
+1595087293022	Delete element
+1595087453743	Copy compilation units
+1595092931640	Delete element
+1595092967157	Rename compilation unit 'Loan.java'
+1595093021733	Delete element
+1595093026637	Delete element
+1595093031900	Delete element
+1595093049809	Rename type 'LoanProcessor'
+1595093069258	Rename type 'LoanChecker'
+1595093790607	Delete element
+1595093810629	Rename type 'LoanCheckApplication'

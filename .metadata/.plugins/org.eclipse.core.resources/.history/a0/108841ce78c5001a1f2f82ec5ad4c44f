@@ -1,0 +1,6 @@
+package com.example.client;
+
+//@FeignClient("Tax-Service")
+public interface RestClient {
+
+}

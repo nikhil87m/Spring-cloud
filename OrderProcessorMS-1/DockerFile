@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/orderprocessor.jar orderprocessor.jar
+EXPOSE 9002 
+ENTRYPOINT ["java", "-jar", "orderprocessor.jar"]

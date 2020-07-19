@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/currencyeurekaserver.jar currencyeurekaserver.jar
+EXPOSE 9000 
+ENTRYPOINT ["java", "-jar", "currencyeurekaserver.jar"]

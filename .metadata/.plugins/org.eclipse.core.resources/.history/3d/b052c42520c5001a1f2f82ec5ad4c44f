@@ -1,0 +1,12 @@
+package com.example.entity;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@Entity
+public class ExchangeEntity {
+	
+	@id
+	private Integer id;
+	private 
+
+}

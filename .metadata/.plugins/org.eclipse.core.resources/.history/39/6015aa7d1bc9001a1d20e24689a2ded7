@@ -1,0 +1,25 @@
+package io.pivotal.loancheck;
+
+import org.springframework.cloud.stream.annotation.Input;
+import org.springframework.cloud.stream.annotation.Output;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.SubscribableChannel;
+import org.springframework.stereotype.Component;
+
+@Component
+public interface LoanProcessor {
+
+  //String APPLICATIONS_IN = "output1";
+  //String APPROVED_OUT = "approvednn";
+  //String DECLINED_OUT = "declinednn";
+
+  @Input("output")
+  SubscribableChannel sourceOfLoanApplications();
+
+  @Output("n")
+  MessageChannel approved();
+
+  @Output("g")
+  MessageChannel declined();
+
+}

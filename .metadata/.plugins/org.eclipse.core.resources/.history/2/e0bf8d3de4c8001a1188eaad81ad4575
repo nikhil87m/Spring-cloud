@@ -1,0 +1,7 @@
+package com.ibm.training.user.service;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+public class MyUserDetailsservice implements UserDetailsService {
+
+}

@@ -1,0 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.43.13:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+ 

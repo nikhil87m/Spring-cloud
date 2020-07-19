@@ -1,0 +1,27 @@
+package com.example.service;
+
+import java.math.BigDecimal;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.entity.ExchangeEntity;
+import com.example.repo.ExchangeRepository;
+
+@Service
+public class CurrencyExchangeService {
+	private static Logger logger= LoggerFactory.getLogger(CurrencyExchangeService.class);
+	
+	@Autowired
+	private ExchangeRepository exchangeRepository;
+	
+	public BigDecimal getConversionfactor(String currencyFrom, String currencyTo) {
+		logger.debug("ENTRY : getConversionfactor: currencyFrom"+currencyFrom+"currencyTo :"+currencyTo);
+		
+		ExchangeEntity exchangeEntity = exchangeRepository.findByCurrencyFromAndCurrencyTo(currencyFrom, currencyTo);
+		
+	}
+
+}

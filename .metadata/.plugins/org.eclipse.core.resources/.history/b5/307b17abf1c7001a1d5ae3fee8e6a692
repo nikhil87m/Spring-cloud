@@ -1,0 +1,30 @@
+package com.example.demo;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.Message;
+import org.springframework.stereotype.Component;
+
+@Component
+public class OrderChecker {
+	
+	public static final Logger logger = LoggerFactory.getLogger(OrderChecker.class);
+	
+	@Autowired
+	public OrderProcesser orderProcesser;
+	
+	public long max_amount = 500;
+	
+	public void checkAndSortOrders(Order order) {
+		logger.debug("ENTRY : checkAndSortOrders : order:"+order);
+		
+		if(order.getAmount() > 500) {
+			order.setStatus("PROCESSED");
+			orderProcesser.processed().send(message(order));
+			
+		}
+		
+	}
+
+}

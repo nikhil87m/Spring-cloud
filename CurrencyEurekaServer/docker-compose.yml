@@ -1,0 +1,12 @@
+eureka-server:
+  image: currencyeurekaserver
+  ports:
+   - "8761:8761"
+user-registration:
+  image: conversionfactorms
+  ports:
+   - "9000:9000"
+  links:
+   - eureka-server
+  environment:
+    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka

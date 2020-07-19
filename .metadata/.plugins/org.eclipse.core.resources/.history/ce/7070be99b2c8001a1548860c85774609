@@ -1,0 +1,8 @@
+#spring.application.name=forex-service
+#server.port=9898
+
+spring.jpa.show-sql=true
+spring.h2.console.enabled=true
+
+
+

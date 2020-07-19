@@ -1,0 +1,21 @@
+zipkin:
+  base-url: 'http://192.168.43.13:9411/'
+sleuth:
+  sampler:
+    probability: 1
+  trace-id128: true
+eureka: null
+instance:
+  instance-id: '${spring.application.name}:${random.int}'
+  lease-expiration-duration-in-seconds: 2
+  lease-renewal-interval-in-seconds: 1
+client:
+  service-url:
+    defaultZone: 'http://192.168.43.13:8761/eureka'
+    instance: null
+    preferIpAddress: true
+spring: null
+application: null
+name: forex-service
+server: null
+port: 9898

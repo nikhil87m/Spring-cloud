@@ -1,0 +1,29 @@
+package com.ibm.training;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.function.EntityResponse;
+
+import com.ibm.training.model.JwtRequest;
+
+@RestController
+public class AuthanticateController  {
+	
+	@Autowired
+	private AuthenticationManager authenticationManager;
+	
+	private UserDetailsService userDetailsService;
+	
+	@PostMapping("/createAuthenticationToken")
+	EntityResponse<String> createAuthenticationToken(@RequestBody JwtRequest jwtRequest) {
+		authenticationManager.authenticate( new UsernamePasswordAuthenticationToken(jwtRequest.getUsername(),jwtRequest.getPassword()) );
+		
+		userDetailsService.loadUserByUsername(jwtRequest.getUsername())
+	}
+
+}

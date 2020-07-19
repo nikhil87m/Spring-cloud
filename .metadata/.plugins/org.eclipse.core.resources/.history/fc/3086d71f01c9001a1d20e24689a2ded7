@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/conversionfactorms.jar conversionfactorms.jar
+EXPOSE 9898
+ENTRYPOINT ["java", "-jar", "conversionfactorms.jar"]

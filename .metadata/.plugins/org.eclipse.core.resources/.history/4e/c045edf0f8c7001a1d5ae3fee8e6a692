@@ -1,0 +1,15 @@
+package com.example.service;
+
+import java.math.BigDecimal;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Service
+public class CurrencyExchangeService {
+	
+	public BigDecimal getConversionfactor(String currencyFrom, String currencyTo) {
+		
+	}
+
+}

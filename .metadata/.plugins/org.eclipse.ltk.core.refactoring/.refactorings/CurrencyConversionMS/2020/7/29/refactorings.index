@@ -1,0 +1,11 @@
+1594670437421	Move compilation unit
+1594670955473	Delete element
+1594695025286	Rename type 'ResponseStatus'
+1594696560336	Rename type 'CurrencyConversionService'
+1594696793451	Move compilation unit
+1594696809540	Delete element
+1594971106722	Delete element
+1595007321166	Rename resource 'application.yaml'
+1595080351847	Rename package 'com.example.demo'
+1595080375009	Rename package 'com.example.service'
+1595080399844	Rename package 'com.example.resObj'

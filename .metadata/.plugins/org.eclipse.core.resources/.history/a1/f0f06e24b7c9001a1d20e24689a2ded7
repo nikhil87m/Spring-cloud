@@ -1,0 +1,8 @@
+spring.application.name=currency-conversion
+server.port=9899
+management.endpoints.web.exposure.include=hystrix.stream
+
+
+
+
+ 

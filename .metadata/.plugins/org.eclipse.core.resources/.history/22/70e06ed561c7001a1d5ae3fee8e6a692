@@ -1,0 +1,11 @@
+package com.example.service;
+
+import java.math.BigDecimal;
+
+public class CurrencyConversionService {
+	
+	private void convertCurrency(String currencyFrom, String currencyTo, BigDecimal amount) {
+
+	}
+
+}

@@ -1,0 +1,2 @@
+jwt.secret=bootcanmp
+server.port=8787

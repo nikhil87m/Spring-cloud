@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/SpringBootMongoPoC-0.0.1-SNAPSHOT.jar SpringBootMongoPoC.jar
+EXPOSE 8085 
+ENTRYPOINT ["java", "-jar", "SpringBootMongoPoC.jar"]

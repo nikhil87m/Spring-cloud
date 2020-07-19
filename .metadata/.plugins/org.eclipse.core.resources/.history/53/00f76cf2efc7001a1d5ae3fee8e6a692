@@ -1,0 +1,12 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public interface OrderProcesser {
+	
+	String ORDERS_IN = "output";
+	String PROCESSED_ORDERS = "processed";
+	String DECLINED_ORDERS = "cancelled";
+
+}
