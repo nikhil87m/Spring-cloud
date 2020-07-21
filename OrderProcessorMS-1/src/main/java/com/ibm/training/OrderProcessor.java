@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public interface OrderProcessor {
 
   @Input("output")
-  SubscribableChannel sourceOfLoanApplications();
+  SubscribableChannel sourceOfOrders();
 
   @Output("n")
   MessageChannel approved();

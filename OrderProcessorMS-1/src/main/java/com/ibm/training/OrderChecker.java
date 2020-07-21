@@ -8,6 +8,7 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
+import com.ibm.training.repository.OrderProcessRepository;
 import com.ibm.training.rules.BusinessRules;
 
 @Component
@@ -19,14 +20,18 @@ public class OrderChecker {
 	
 	@Autowired
 	private BusinessRules businessRules;
+	
+	@Autowired
+	private OrderProcessRepository orderProcessRepository;
 
 	@StreamListener("output")
-	public void checkAndSortLoans(Order order) {
-		
+	public void checkAndSortOrders(Order order) {
+		log.info("ENTRY: checkAndSortOrders :order :"+order);
 		order.setStatus(businessRules.setPriority(order));
 		
 		if (order.getAmount() > 5000) {
 			processor.approved().send(message(order));
+			orderProcessRepository.save(order);
 			
 		} else if (order.getAmount() > 400) {
 			processor.approved().send(message(order));
@@ -34,7 +39,7 @@ public class OrderChecker {
 		} else {
 			processor.declined().send(message(order));
 		}
-		log.info("Exit  :" + order.getStatus() + " " + order);
+		log.info("Exit  :checkAndSortOrders" + order.getStatus() + " " + order);
 
 	}
 

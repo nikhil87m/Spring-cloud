@@ -13,16 +13,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import com.ibm.training.user.service.MyUserDetailsService;
 
 @EnableWebSecurity
-public class SecurityConfigurer  extends WebSecurityConfigurerAdapter{
+public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private MyUserDetailsService myUserDetailsservice;
-	
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(myUserDetailsservice);
 	}
-	
+
 	@Bean
 	PasswordEncoder passwordEncoder() {
 		return NoOpPasswordEncoder.getInstance();
@@ -32,7 +32,7 @@ public class SecurityConfigurer  extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable().authorizeRequests().antMatchers("/createAuthenticationToken").permitAll();
 	}
-	
+
 	@Override
 	@Bean
 	protected AuthenticationManager authenticationManager() throws Exception {

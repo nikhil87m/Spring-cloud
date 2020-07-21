@@ -1,7 +1,14 @@
 package com.ibm.training;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ORDER_DETAILS")
 public class Order {
-	
+
+	@Id
 	private String orderId;
 	private String name;
 	private String status = "NEW";

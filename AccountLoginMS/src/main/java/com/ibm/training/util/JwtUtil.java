@@ -55,14 +55,14 @@ public class JwtUtil implements Serializable {
 
 	private String doGenerateToken(Map<String, Object> claims, String subject) {
 		return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
-				.setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
+				.setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY ))
 				.signWith(SignatureAlgorithm.HS512, secret).compact();
 	}
 
 
-	public Boolean validateToken(String token, UserDetails userDetails) {
+	public Boolean validateToken(String token, String userName) {
 		final String username = getUsernameFromToken(token);
-		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+		return (username.equals(userName) && !isTokenExpired(token));
 	}
 
 }

@@ -1,4 +1,0 @@
-FROM openjdk:8
-ADD target/SampleEC-0.0.1-SNAPSHOT.jar sampleec.jar
-EXPOSE 8585 
-ENTRYPOINT ["java", "-jar", "sampleec.jar"]

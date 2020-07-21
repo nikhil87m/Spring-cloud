@@ -1,11 +1,15 @@
 package com.ibm.training.rules;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.ibm.training.Order;
 
 @Service
 public class BusinessRules {
+	
+	public static final Logger log = LoggerFactory.getLogger(BusinessRules.class);
 	
 	public String setPriority(Order order) {
 		String priority = null;
