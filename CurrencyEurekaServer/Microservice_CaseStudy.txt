@@ -1,0 +1,86 @@
+Set up 2 instances of MS-1 and load balance the call from MS-2 to MS-1 using Ribbon Load Balancer
+Dockerize both the microservices and upload in Google container registry or IBM registry or docker hub.
+Set up the free tier Kubernetes cluster in IBM Cloud or Google Cloud and deploy the docker images in Kubernetes cluster
+
+java -jar zipkin.jar
+http://localhost:9411/zipkin/
+
+Sleuth is a tool from Spring cloud family. It is used to generate the trace id, span id and add these information to the 
+
+IAM -AWS : (DEPLOY IN AMAZON WEBSERVICE)
+Access key  AKIAQG7B6UYJQYJUU24K
+Secert key wSqhq31S9VDJQzLN/gk8fg21qMSM1tUXejv7is5F
+default region: us-east-2
+1. Install CLI
+2. aws configure ( access key id/seceret access key/default region name/output format)
+$ aws configure sso
+SSO start URL [None]: [None]: https://my-sso-portal.awsapps.com/start
+SSO region [None]:us-east-2
+<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-iam -->
+<dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk-iam</artifactId>
+    <version>1.9.21</version>
+</dependency>
+
+AWS S3 Glacier vault: MyGlacier
+
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 014969382419.dkr.ecr.us-east-2.amazonaws.com
+docker tag nikhil87m:latest 014969382419.dkr.ecr.us-east-2.amazonaws.com/nikhil87m:latest
+docker push 014969382419.dkr.ecr.us-east-2.amazonaws.com/nikhil87m:latest
+
+3.curl -o kubectl.exe https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.7/2020-07-08/bin/windows/amd64/kubectl.exe
+4.IAM> EKS >EKS Cluster
+
+DOCKER-IMAGES:
+conversion-factor || docker run -d -p 9898:9898 conversionfactorms || docker build -f DockerFile -t conversionfactorms .
+currency-eureka-server  || docker run -d -p 8761:8761 currencyeurekaserver || docker build -f DockerFile -t currencyeurekaserver .
+currency-conversion || docker run -d -p 9899:9899 currencyconversionms || docker build -f DockerFile -t currencyconversionms
+
+docker run -d -p 9411:9411 openzipkin/zipkin
+docker rmi -f $(docker images -a -q)
+
+forex-service
+#forex-service.ribbon.listOfServers=http://localhost:8000, http://localhost:8001 
+${vcap.services.github-eureka.credentials.uri:http://172.18.0.2:8761}/eureka/
+${vcap.services.pwa-eureka-service.credentials.uri}/eureka/
+http://34.67.223.96:8761/
+
+kafdrop : http://localhost:9000/
+wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+OK
+echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+deb https://packages.cloudfoundry.org/debian stable main
+sudo apt-get update
+
+https://9898-dot-13261250-dot-devshell.appspot.com/CurrencyExchangeController/getConversionfactor?currencyFrom=AUD&currencyTo=INR
+
+docker tag myimages gcr.io/brave-iterator-283516/image name
+docker push
+kubectl get deployments
+docker-compose -f docker-compose.yml up
+
+http://localhost:8000/CurrencyExchangeController/updateCurrencyFactor?currencyFrom=CHF&currencyTo=INR&conversionFactor=85
+http://localhost:8000/CurrencyExchangeController/addCurrencyFactor?currencyFrom=CHF&currencyTo=INR&conversionFactor=78
+http://localhost:8000/CurrencyExchangeController/getCurrencyFactor?currencyFrom=USD&currencyTo=INR
+http://localhost:9899/CurrencyConversionController/convertCurrency?currencyFrom=CHF&currencyTo=INR&amount=1000
+Docker hub/ GCR/GKE
+docker tag myimages gcr.io/brave-iterator-283516/image name
+docker-compose -f docker-compose.yml up
+
+Conversion Factor
+http://35.184.137.211:9898/CurrencyExchangeController/getConversionfactor?currencyFrom=USD&currencyTo=INR
+http://35.184.137.211:9898/CurrencyExchangeController/addConversionFactor?currencyFrom=CAD&currencyTo=INR&conversionFactor=55
+http://35.184.137.211:9898/CurrencyExchangeController/updateConversionFactor?currencyFrom=CHF&currencyTo=INR&conversionFactor=85
+
+http://34.68.192.245:9899/CurrencyConversionController/convertCurrency?currencyFrom=USD&currencyTo=INR&amount=1000
+
+Eureka: http://34.67.223.96:8761/
+Zipkin: http://34.67.52.246:9411/zipkin/
+hystrix: http://34.68.192.245:9899/hystrix (http://34.68.192.245:9899/actuator/hystrix.stream)
+
+Order Processing
+http://localhost:9900/getProcessedOrderDetails
+
+http://localhost:8383/AccountLanding/accountDetails
+http://localhost:8383/AuthanticateController/createAuthenticationToken

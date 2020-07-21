@@ -8591,3 +8591,9 @@ org.eclipse.debug.core.DebugException: Launch configuration SampleES-1 - SampleE
 2020-07-21 19:30:07,844 [Worker-1393: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\NikhilenduMandal\Documents\CaseStudy\AccountLoginMS\src\test\resources
 2020-07-21 19:30:18,878 [Worker-1392: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-07-21 19:30:18,880 [Worker-1392: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-07-21 19:30:18,892 [Worker-1392: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-07-21 19:30:18,895 [Worker-1392: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-21 19:30:18,896 [Worker-1392: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\NikhilenduMandal\Documents\CaseStudy\AccountLoginMS\src\test\resources
+2020-07-21 19:33:53,768 [Worker-1399: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-21 19:33:53,772 [Worker-1399: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2020-07-21 19:33:53,800 [Worker-1399: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
